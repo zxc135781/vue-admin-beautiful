@@ -5,11 +5,7 @@ import App from "./App";
 import store from "./store";
 import router from "./router";
 import "./plugins";
-
-if (
-  process.env.VUE_APP_PREVIEW === "true" ||
-  process.env.NODE_ENV === "development"
-) {
+if (process.env.NODE_ENV === "preview") {
   const { mockXHR } = require("../mock/static");
   mockXHR();
 }

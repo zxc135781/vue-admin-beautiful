@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-npm run build
+npm run build:preview
 cd dist
 touch .nojekyll
 git init
