@@ -155,7 +155,9 @@ export default {
       this.$refs.loginForm.validate(async (valid) => {
         if (valid) {
           this.loading = true;
-          await this.$store.dispatch("user/login", this.loginForm);
+          await this.$store.dispatch("user/login", this.loginForm).catch(() => {
+            this.loading = false;
+          });
           const routerPath =
             this.redirect === "/404" || this.redirect === "/401"
               ? "/"
