@@ -187,7 +187,7 @@ module.exports = {
     sourceMap: true,
     loaderOptions: {
       scss: {
-        additionalData: '@import "~@/styles/variables.scss";',
+        prependData: '@import "~@/styles/variables.scss";',
       },
     },
   },
