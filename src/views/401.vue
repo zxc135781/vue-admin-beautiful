@@ -57,11 +57,9 @@ export default {
   },
   mounted() {
     this.timeChange();
-    document.body.style.background = "#ffffff";
   },
   beforeDestroy() {
     clearInterval(this.timer);
-    document.body.style.background = "#f2f2f2";
   },
   methods: {
     timeChange() {

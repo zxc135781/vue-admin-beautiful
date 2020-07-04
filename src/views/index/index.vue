@@ -289,13 +289,14 @@ export default {
   },
   data() {
     return {
+      timer: 0,
       updateTime: process.env.VUE_APP_UPDATE_TIME,
       nodeEnv: process.env.NODE_ENV,
       dependencies: dependencies,
       devDependencies: devDependencies,
       config1: {
         startVal: 0,
-        endVal: this.$baseLodash.random(1000, 20000),
+        endVal: this.$baseLodash.random(20000, 60000),
         decimals: 0,
         prefix: "",
         suffix: "",
@@ -334,7 +335,7 @@ export default {
           {
             type: "category",
             boundaryGap: false,
-            data: ["0时", "4时", "8时", "12时", "16时", "20时", "24时"],
+            data: [],
             axisTick: {
               alignWithLabel: true,
             },
@@ -349,7 +350,7 @@ export default {
           {
             name: "访问量",
             type: "line",
-            data: [10, 52, 20, 33, 39, 33, 22],
+            data: [],
             smooth: true,
             areaStyle: {},
           },
@@ -661,7 +662,42 @@ export default {
   created() {
     this.fetchData();
   },
-  mounted() {},
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
+  mounted() {
+    let base = +new Date(2020, 1, 1);
+    let oneDay = 24 * 3600 * 1000;
+    let date = [];
+
+    let data = [Math.random() * 1500];
+    let now = new Date(base);
+
+    const addData = (shift) => {
+      now = [now.getFullYear(), now.getMonth() + 1, now.getDate()].join("/");
+      date.push(now);
+      data.push(this.$baseLodash.random(20000, 60000));
+
+      if (shift) {
+        date.shift();
+        data.shift();
+      }
+
+      now = new Date(+new Date(now) + oneDay);
+    };
+
+    for (let i = 1; i < 6; i++) {
+      addData();
+    }
+    addData(true);
+    this.fwl.xAxis[0].data = date;
+    this.fwl.series[0].data = data;
+    this.timer = setInterval(() => {
+      addData(true);
+      this.fwl.xAxis[0].data = date;
+      this.fwl.series[0].data = data;
+    }, 3000);
+  },
   methods: {
     handleClick(e) {
       this.$baseMessage(`点击了${e.name},这里可以写跳转`);
