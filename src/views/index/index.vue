@@ -219,14 +219,7 @@
           </el-card>
         </router-link>
       </el-col>
-      <el-col
-        v-if="nodeEnv !== 'development'"
-        :xs="24"
-        :sm="24"
-        :md="12"
-        :lg="12"
-        :xl="12"
-      >
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>更新日志</span>
@@ -243,18 +236,23 @@
           </el-timeline>
         </el-card>
       </el-col>
-      <el-col
-        v-if="nodeEnv !== 'development'"
-        :xs="24"
-        :sm="24"
-        :md="12"
-        :lg="12"
-        :xl="12"
-      >
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card shadow="never">
           <div slot="header">
             <span>其他信息</span>
           </div>
+          <a
+            target="_blank"
+            href="https://github.com/chuzhixin/vue-admin-beautiful"
+          >
+            <img
+              src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful.svg?style=for-the-badge&label=VUE-ADMIN-BEAUTIFUL STAR&logo=github"
+            />
+            <img
+              style="margin-left: 10px;"
+              src="https://img.shields.io/github/forks/chuzhixin/vue-admin-beautiful.svg?style=for-the-badge&label=VUE-ADMIN-BEAUTIFUL FORK&logo=vue.js"
+            />
+          </a>
           <div v-for="(item, index) in noticeList" :key="index">
             <el-alert
               v-if="index !== 0"
@@ -267,7 +265,6 @@
           </div>
           <el-alert :closable="false" :title="userAgent" type="info">
           </el-alert>
-          <br />
         </el-card>
       </el-col>
     </el-row>
