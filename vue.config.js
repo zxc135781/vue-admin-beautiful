@@ -189,6 +189,16 @@ module.exports = {
     loaderOptions: {
       scss: {
         prependData: '@import "~@/styles/variables.scss";',
+        /*sass-loader 9.0写法暂未验证，暂时注释 */
+        // additionalData(content, loaderContext) {
+        //   const { resourcePath, rootContext } = loaderContext;
+        //   const relativePath = path.relative(rootContext, resourcePath);
+        //   if (
+        //     relativePath.replace(/\\/g, "/") !== "src/styles/variables.scss"
+        //   ) {
+        //     return '@import "~@/styles/variables.scss";';
+        //   }
+        // },
       },
     },
   },
