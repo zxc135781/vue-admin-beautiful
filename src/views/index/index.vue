@@ -1,14 +1,7 @@
 <template>
   <div class="index-container">
     <el-row :gutter="20">
-      <el-col
-        v-if="nodeEnv !== 'development'"
-        :xs="24"
-        :sm="24"
-        :md="24"
-        :lg="24"
-        :xl="24"
-      >
+      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <el-alert
           v-if="noticeList[0]"
           :title="noticeList[0].title"
@@ -19,8 +12,16 @@
             href="https://github.com/chuzhixin/vue-admin-beautiful"
           >
             <img
-              style="height: 100%;"
-              src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social"
+              style="height: 100%; margin-right: 10px;"
+              src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&label=Stars&logo=github"
+            />
+            <img
+              style="height: 100%; margin-right: 10px;"
+              src=" https://img.shields.io/badge/Visitors-79.3k/mouth-blue?style=flat-square&logo=Visual Studio Code"
+            />
+            <img
+              style="height: 100%; margin-right: 10px;"
+              src="https://img.shields.io/github/last-commit/chuzhixin/vue-admin-beautiful?style=flat-square&label=Last Commit&logo=vue.js"
             />
           </a>
         </el-alert>
@@ -241,18 +242,10 @@
           <div slot="header">
             <span>其他信息</span>
           </div>
-          <a
-            target="_blank"
-            href="https://github.com/chuzhixin/vue-admin-beautiful"
-          >
-            <img
-              src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful.svg?style=for-the-badge&label=VUE-ADMIN-BEAUTIFUL STAR&logo=github"
-            />
-            <img
-              style="margin-left: 10px;"
-              src="https://img.shields.io/github/forks/chuzhixin/vue-admin-beautiful.svg?style=for-the-badge&label=VUE-ADMIN-BEAUTIFUL FORK&logo=vue.js"
-            />
-          </a>
+          <div style="text-align: center;">
+            <vab-colorful-icon style="font-size: 90px;" icon-class="vab" />
+            <h1 style="font-size: 30px;">vue-admin-beautiful</h1>
+          </div>
           <div v-for="(item, index) in noticeList" :key="index">
             <el-alert
               v-if="index !== 0"
