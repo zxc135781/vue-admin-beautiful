@@ -5,6 +5,7 @@
 
 @charset "utf-8";
 
+@import "./normalize.scss";
 @import "./transition.scss";
 @import "./loading.scss";
 
@@ -57,13 +58,6 @@ $base: ".vab";
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  outline: none;
-}
-
 img {
   object-fit: cover;
 }
@@ -94,6 +88,29 @@ html {
     i {
       &:hover {
         opacity: 0.8;
+      }
+    }
+
+    /* el-tag开始 */
+    .el-tag + .el-tag {
+      margin-left: 10px;
+    }
+
+    /* el-tag结束 */
+
+    /* 右侧主题配置、拷贝代码开始 */
+    .theme-bar-setting {
+      div {
+        border-bottom: 0 !important;
+
+        & + div {
+          border-top: 1px solid $base-color-white;
+        }
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
       }
     }
 
