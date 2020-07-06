@@ -258,6 +258,7 @@
           </div>
           <el-alert :closable="false" :title="userAgent" type="info">
           </el-alert>
+          <br />
         </el-card>
       </el-col>
     </el-row>

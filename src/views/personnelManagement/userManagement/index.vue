@@ -119,7 +119,7 @@ export default {
         if (this.selectRows.length > 0) {
           const ids = this.selectRows.map((item) => item.id).join();
           this.$baseConfirm("你确定要删除选中项吗", null, async () => {
-            const { msg } = await doDelete({ ids: row.id });
+            const { msg } = await doDelete({ ids });
             this.$baseMessage(msg, "success");
             this.fetchData();
           });
