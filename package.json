@@ -25,6 +25,10 @@
     "increase-memory-limit": "increase-memory-limit",
     "helper": "node node_modules/zx-layouts"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuzhixin/vue-admin-beautiful.git"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

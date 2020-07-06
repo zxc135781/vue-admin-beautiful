@@ -1,5 +1,5 @@
 import { MessageBox } from "element-ui";
-
+import { repository } from "../../package.json";
 if (!!window.ActiveXObject || "ActiveXObject" in window) {
   MessageBox({
     title: "温馨提示",
@@ -13,4 +13,9 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) {
     closeOnHashChange: false,
     dangerouslyUseHTMLString: true,
   });
+}
+if (process.env.NODE_ENV !== "development") {
+  document.writeln(
+    '<script>console.log("' + repository.url.slice(4) + '");</script>'
+  );
 }
