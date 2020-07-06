@@ -243,7 +243,7 @@
             <span>其他信息</span>
           </div>
           <div style="text-align: center;">
-            <vab-colorful-icon style="font-size: 90px;" icon-class="vab" />
+            <vab-colorful-icon style="font-size: 140px;" icon-class="vab" />
             <h1 style="font-size: 30px;">vue-admin-beautiful</h1>
           </div>
           <div v-for="(item, index) in noticeList" :key="index">
