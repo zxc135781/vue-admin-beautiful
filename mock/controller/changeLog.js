@@ -137,6 +137,10 @@ const data = [
     content: "添加菜单管理",
     timestamp: "2020-07-7",
   },
+  {
+    content: "首次采用sass-loader 9.0写法，感谢github用户 shaonialife",
+    timestamp: "2020-07-7",
+  },
 ];
 
 export default [
