@@ -94,4 +94,6 @@ module.exports = {
   providePlugin: { maptalks: "maptalks", "window.maptalks": "maptalks" },
   //npm run build时是否自动生成7z压缩包
   build7z: false,
+  //代码生成机生成在view下的文件名
+  templateFolder: "project",
 };
