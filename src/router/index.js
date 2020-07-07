@@ -91,7 +91,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: "noRedirect",
     name: "PersonnelManagement",
-    meta: { title: "人员", icon: "users-cog", permissions: ["admin"] },
+    meta: { title: "配置", icon: "users-cog", permissions: ["admin"] },
     children: [
       {
         path: "userManagement",
@@ -106,6 +106,13 @@ export const asyncRoutes = [
         component: () =>
           import("@/views/personnelManagement/roleManagement/index"),
         meta: { title: "角色管理" },
+      },
+      {
+        path: "menuManagement",
+        name: "MenuManagement",
+        component: () =>
+          import("@/views/personnelManagement/menuManagement/index"),
+        meta: { title: "菜单管理" },
       },
     ],
   },

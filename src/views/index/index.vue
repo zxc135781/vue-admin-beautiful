@@ -17,7 +17,7 @@
             />
             <img
               style="height: 100%; margin-right: 10px;"
-              src=" https://img.shields.io/badge/Visitors-79.3k/mouth-blue?style=flat-square&logo=Visual Studio Code"
+              src=" https://img.shields.io/badge/Visitors-79.3k/month-blue?style=flat-square&logo=Visual Studio Code"
             />
             <img
               style="height: 100%; margin-right: 10px;"
