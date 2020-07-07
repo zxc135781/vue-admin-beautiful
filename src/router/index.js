@@ -112,7 +112,7 @@ export const asyncRoutes = [
         name: "MenuManagement",
         component: () =>
           import("@/views/personnelManagement/menuManagement/index"),
-        meta: { title: "菜单管理" },
+        meta: { title: "菜单管理", badge: "New" },
       },
     ],
   },

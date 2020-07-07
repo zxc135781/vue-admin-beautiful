@@ -5,6 +5,7 @@
         <el-table-column
           v-if="header.show"
           :key="header.key"
+          show-overflow-tooltip
           :label="header.label"
           align="center"
         >

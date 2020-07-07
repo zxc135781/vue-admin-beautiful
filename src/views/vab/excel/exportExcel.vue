@@ -41,27 +41,27 @@
       :data="list"
       :element-loading-text="elementLoadingText"
     >
-      <el-table-column label="序号" width="55">
+      <el-table-column show-overflow-tooltip label="序号" width="55">
         <template slot-scope="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
-      <el-table-column label="标题">
+      <el-table-column show-overflow-tooltip label="标题">
         <template slot-scope="scope">
           {{ scope.row.title }}
         </template>
       </el-table-column>
-      <el-table-column label="作者">
+      <el-table-column show-overflow-tooltip label="作者">
         <template slot-scope="scope">
           <el-tag>{{ scope.row.author }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="访问量">
+      <el-table-column show-overflow-tooltip label="访问量">
         <template slot-scope="scope">
           {{ scope.row.pageViews }}
         </template>
       </el-table-column>
-      <el-table-column label="时间">
+      <el-table-column show-overflow-tooltip label="时间">
         <template slot-scope="scope">
           <span>{{ scope.row.datetime }}</span>
         </template>

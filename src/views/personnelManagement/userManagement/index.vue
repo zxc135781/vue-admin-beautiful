@@ -33,12 +33,24 @@
       :element-loading-text="elementLoadingText"
       @selection-change="setSelectRows"
     >
-      <el-table-column type="selection"></el-table-column>
-      <el-table-column prop="id" label="id"></el-table-column>
-      <el-table-column prop="userName" label="用户名"></el-table-column>
-      <el-table-column prop="email" label="邮箱"></el-table-column>
+      <el-table-column show-overflow-tooltip type="selection"></el-table-column>
+      <el-table-column
+        show-overflow-tooltip
+        prop="id"
+        label="id"
+      ></el-table-column>
+      <el-table-column
+        show-overflow-tooltip
+        prop="userName"
+        label="用户名"
+      ></el-table-column>
+      <el-table-column
+        show-overflow-tooltip
+        prop="email"
+        label="邮箱"
+      ></el-table-column>
 
-      <el-table-column label="权限">
+      <el-table-column show-overflow-tooltip label="权限">
         <template v-slot="{ row }">
           <el-tag v-for="(item, index) in row.permissions" :key="index">{{
             item
@@ -46,8 +58,17 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="datatime" label="修改时间"></el-table-column>
-      <el-table-column fixed="right" label="操作" width="200">
+      <el-table-column
+        show-overflow-tooltip
+        prop="datatime"
+        label="修改时间"
+      ></el-table-column>
+      <el-table-column
+        show-overflow-tooltip
+        fixed="right"
+        label="操作"
+        width="200"
+      >
         <template v-slot="scope">
           <el-button type="text" @click="handleEdit(scope.row)"
             >编辑

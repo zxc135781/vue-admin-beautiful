@@ -5,13 +5,17 @@
       :data="list"
       :element-loading-text="elementLoadingText"
     >
-      <el-table-column type="selection" width="55"></el-table-column>
-      <el-table-column label="序号" width="95">
+      <el-table-column
+        show-overflow-tooltip
+        type="selection"
+        width="55"
+      ></el-table-column>
+      <el-table-column show-overflow-tooltip label="序号" width="95">
         <template slot-scope="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
-      <el-table-column min-width="300px" label="标题">
+      <el-table-column show-overflow-tooltip min-width="300px" label="标题">
         <template slot-scope="{ row }">
           <template v-if="row.edit">
             <el-input v-model="row.title" style="width: 300px;" />
@@ -26,8 +30,17 @@
           <span v-else>{{ row.title }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="作者" prop="author"></el-table-column>
-      <el-table-column align="center" label="操作" width="200">
+      <el-table-column
+        show-overflow-tooltip
+        label="作者"
+        prop="author"
+      ></el-table-column>
+      <el-table-column
+        show-overflow-tooltip
+        align="center"
+        label="操作"
+        width="200"
+      >
         <template slot-scope="{ row }">
           <el-button
             v-if="row.edit"

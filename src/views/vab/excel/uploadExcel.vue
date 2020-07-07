@@ -8,6 +8,7 @@
       <el-table-column
         v-for="item of tableHeader"
         :key="item"
+        show-overflow-tooltip
         :prop="item"
         :label="item"
       />

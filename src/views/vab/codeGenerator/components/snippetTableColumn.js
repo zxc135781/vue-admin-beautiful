@@ -7,7 +7,7 @@ const timeFieldNeedHandle = {
   end_time: true,
 };
 const genTableColumnSnippetSimple = (key, label) => {
-  return `<el-table-column prop="${key}" label="${label}"/>`;
+  return `<el-table-column show-overflow-tooltip prop="${key}" label="${label}"/>`;
 };
 
 const genTabeleColumnSinppetTemplate = (key, label) => {
@@ -17,7 +17,7 @@ const genTabeleColumnSinppetTemplate = (key, label) => {
   } else {
     val = `row.${key}`;
   }
-  return `<el-table-column label="${label}">
+  return `<el-table-column show-overflow-tooltip label="${label}">
           <template v-slot={row}>
             {{ ${val} }}
           </template>

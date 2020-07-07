@@ -44,15 +44,27 @@
       @selection-change="setSelectRows"
       @sort-change="tableSortChange"
     >
-      <el-table-column type="selection" width="55"></el-table-column>
-      <el-table-column label="序号" width="95">
+      <el-table-column
+        show-overflow-tooltip
+        type="selection"
+        width="55"
+      ></el-table-column>
+      <el-table-column show-overflow-tooltip label="序号" width="95">
         <template slot-scope="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
-      <el-table-column prop="title" label="标题"></el-table-column>
-      <el-table-column label="作者" prop="author"></el-table-column>
-      <el-table-column label="头像">
+      <el-table-column
+        show-overflow-tooltip
+        prop="title"
+        label="标题"
+      ></el-table-column>
+      <el-table-column
+        show-overflow-tooltip
+        label="作者"
+        prop="author"
+      ></el-table-column>
+      <el-table-column show-overflow-tooltip label="头像">
         <template slot-scope="scope">
           <el-image
             v-if="imgShow"
@@ -62,11 +74,12 @@
         </template>
       </el-table-column>
       <el-table-column
+        show-overflow-tooltip
         label="点击量"
         prop="pageViews"
         sortable
       ></el-table-column>
-      <el-table-column label="状态">
+      <el-table-column show-overflow-tooltip label="状态">
         <template slot-scope="scope">
           <el-tooltip
             :content="scope.row.status"
@@ -81,11 +94,17 @@
         </template>
       </el-table-column>
       <el-table-column
+        show-overflow-tooltip
         label="时间"
         prop="datetime"
         width="200"
       ></el-table-column>
-      <el-table-column label="操作" width="180px" fixed="right">
+      <el-table-column
+        show-overflow-tooltip
+        label="操作"
+        width="180px"
+        fixed="right"
+      >
         <template slot-scope="scope">
           <el-button type="text" @click="handleEdit(scope.row)"
             >编辑

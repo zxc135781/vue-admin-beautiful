@@ -44,9 +44,9 @@ export const genTableSnippet = (headers = "getList") => {
       :element-loading-text="elementLoadingText"
       @selection-change="setSelectRows"
     >
-      <el-table-column type="selection"></el-table-column>
+      <el-table-column show-overflow-tooltip type="selection"></el-table-column>
       ${genTableColumnSnippet(headers)}
-      <el-table-column fixed="right" label="操作" width="200">
+      <el-table-column show-overflow-tooltip fixed="right" label="操作" width="200">
         <template v-slot="scope">
           <el-button type="text" @click="editList(scope.row)"
           >编辑

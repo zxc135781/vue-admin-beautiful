@@ -192,12 +192,9 @@ html {
         padding: 7.5px 0;
 
         .cell {
-          overflow: hidden;
           font-size: $base-font-size-default;
           font-weight: normal;
           color: #606266;
-          text-overflow: ellipsis;
-          white-space: nowrap;
 
           .el-image {
             width: 50px;

@@ -12,29 +12,29 @@
     </vab-query-form>
 
     <el-table ref="multipleTable" v-loading="listLoading" :data="list">
-      <el-table-column label="序号" width="55">
+      <el-table-column show-overflow-tooltip label="序号" width="55">
         <template slot-scope="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
-      <el-table-column label="Main Information">
-        <el-table-column label="Title">
+      <el-table-column show-overflow-tooltip label="Main Information">
+        <el-table-column show-overflow-tooltip label="Title">
           <template slot-scope="scope">
             {{ scope.row.title }}
           </template>
         </el-table-column>
-        <el-table-column label="Author">
+        <el-table-column show-overflow-tooltip label="Author">
           <template slot-scope="scope">
             <el-tag>{{ scope.row.author }}</el-tag>
           </template>
         </el-table-column>
-        <el-table-column label="Readings">
+        <el-table-column show-overflow-tooltip label="Readings">
           <template slot-scope="scope">
             {{ scope.row.pageViews }}
           </template>
         </el-table-column>
       </el-table-column>
-      <el-table-column label="Date">
+      <el-table-column show-overflow-tooltip label="Date">
         <template slot-scope="scope">
           <span>{{ scope.row.datetime }}</span>
         </template>
