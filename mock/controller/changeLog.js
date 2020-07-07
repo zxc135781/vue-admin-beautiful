@@ -133,6 +133,10 @@ const data = [
     content: "彻底重构了SideBar与TopBar 大幅精简dom渲染逻辑 全球首发",
     timestamp: "2020-06-25",
   },
+  {
+    content: "添加菜单管理",
+    timestamp: "2020-07-7",
+  },
 ];
 
 export default [
