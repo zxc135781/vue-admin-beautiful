@@ -57,7 +57,7 @@ $base-menu-item-height: 50px;
 //app-main的高度
 $base-app-main-height: calc(
   100vh - #{$base-nav-bar-height} - #{$base-tags-bar-height} - #{$base-padding} -
-  #{$base-padding} - 55px - 30px
+    #{$base-padding} - 55px - 30px
 );
 //纵向布局时左侧导航未折叠时的宽度
 $base-left-menu-width: 230px;
@@ -69,6 +69,8 @@ $base-left-menu-width-min: 65px;
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 //默认动画
 $base-transition: all 0.2s;
+//默认动画时长
+$base-transition-time: 0.2s;
 
 :export {
   //菜单文字颜色变量导出
