@@ -38,7 +38,7 @@ cnpm run serve
 
 #### - [Element UI 表单设计及代码生成器（可视化表单设计器，一键生成 element 表单）](https://github.com/JakHuang/form-generator)
 
-#### - [luch-request（基于 Promise 开发的跨平台、项目级别的请求库，它有更小的体积，易用的 api，方便简单的自定义能力）](https://www.quanzhan.co/luch-request)
+#### - [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库，它有更小的体积，易用的 api，方便简单的自定义能力）](https://www.quanzhan.co/luch-request)
 
 #### - [pl-table 完美解决 element 万级表格数据渲染卡顿问题](https://github.com/livelyPeng/pl-table)
 
