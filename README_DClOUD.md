@@ -20,6 +20,8 @@
 
 #### - [uView 开源地址（uView UI，是 uni-app 生态优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水）](https://github.com/YanxinNet/uView)
 
+#### - [luch-request（基于 Promise 开发的跨平台、项目级别的请求库，它有更小的体积，易用的 api，方便简单的自定义能力）](https://www.quanzhan.co/luch-request)
+
 ## 运行步骤，严格按步骤来
 
 ```bash
