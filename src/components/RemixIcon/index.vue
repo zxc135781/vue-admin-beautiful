@@ -51,8 +51,8 @@ export default {
 
 <style lang="scss" scoped>
 .svg-icon {
-  width: 1.25em;
-  height: 1.25em;
+  width: 1.125em;
+  height: 1.125em;
   overflow: hidden;
   fill: currentColor;
 

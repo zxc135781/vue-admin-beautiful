@@ -122,7 +122,7 @@ export const asyncRoutes = [
     redirect: "noRedirect",
     name: "Vab",
     alwaysShow: true,
-    meta: { title: "组件", icon: "cloud" },
+    meta: { title: "组件", icon: "box-open" },
     children: [
       {
         path: "permissions",
@@ -304,7 +304,11 @@ export const asyncRoutes = [
         path: "editor",
         name: "Editor",
         component: () => import("@/views/vab/editor/index"),
-        meta: { title: "富文本编辑器", permissions: ["admin"], badge: "New" },
+        meta: {
+          title: "富文本编辑器",
+          permissions: ["admin"],
+          badge: "New",
+        },
       },
       {
         path: "qrCode",
