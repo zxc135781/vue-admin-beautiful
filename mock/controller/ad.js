@@ -1,5 +1,11 @@
 const data = [
   {
+    title:
+      "近日发现一个名为OKMG芒果源码的网站公然出售vue-admin-beautiful的开源代码，在此向大家说明，框架开源版本永久免费，请勿上当受骗。",
+    url:
+      "//shang.qq.com/wpa/qunwpa?idkey=14f123ac6d4ef3122bbb60d4693f1d8c951a50be2296951efb12d5ab1642f36b",
+  },
+  {
     title: "uView UI：全面的组件和便捷的工具会让您信手拈来，如鱼得水。",
     url: "https://uviewui.com/",
   },
