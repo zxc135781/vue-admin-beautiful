@@ -11,6 +11,8 @@ import "@/utils/errorLog";
 import drag from "@/directive/drag";
 import permissions from "@/directive/permissions";
 import "./vabIcon";
+import VabCount from "zx-count";
+
 import VabQueryForm from "@/components/VabQueryForm";
 import VabQueryFormTopPanel from "@/components/VabQueryForm/VabQueryFormTopPanel";
 import VabQueryFormBottomPanel from "@/components/VabQueryForm/VabQueryFormBottomPanel";
@@ -24,6 +26,7 @@ VueAMap.initAMapApiLoader({
   v: "1.4.4",
 });
 Vue.use(VueAMap);
+Vue.use(VabCount);
 Vue.use(permissions);
 Vue.use(drag);
 Vue.use(vab);

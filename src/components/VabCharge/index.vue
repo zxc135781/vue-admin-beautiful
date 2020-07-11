@@ -23,11 +23,8 @@
 </template>
 
 <script>
-import VabCount from "@/plugins/vabCount";
-
 export default {
   name: "VabCharge",
-  components: { VabCount },
   props: {
     styleObj: {
       type: Object,
