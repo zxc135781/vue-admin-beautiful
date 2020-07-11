@@ -17,12 +17,13 @@ import VabQueryFormBottomPanel from "@/components/VabQueryForm/VabQueryFormBotto
 import VabQueryFormLeftPanel from "@/components/VabQueryForm/VabQueryFormLeftPanel";
 import VabQueryFormRightPanel from "@/components/VabQueryForm/VabQueryFormRightPanel";
 import VueAMap from "vue-amap";
-Vue.use(VueAMap);
+
 VueAMap.initAMapApiLoader({
   key: "19c9d4c0e4b9611cd931a1e4f70788dc",
   plugin: ["Autocomplete", "PlaceSearch", "PolyEditor", "CircleEditor"],
   v: "1.4.4",
 });
+Vue.use(VueAMap);
 Vue.use(permissions);
 Vue.use(drag);
 Vue.use(vab);
