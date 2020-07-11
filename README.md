@@ -46,10 +46,6 @@ cnpm run serve
 
 ![img](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
 
-## 付费学习，付费技术支持，商务合作
-
-### 联系：QQ 1204505056
-
 ## setting.js 配置
 
 - 说明：这里有好多你会用到的配置项。
@@ -276,25 +272,6 @@ Vue.use(ElementUI, {
 });
 ```
 
-## variables.scss 配置
+## 付费学习，付费技术支持，商务合作
 
-- 说明：这里可以修改你项目的配色方案，简单修改即可实现风格大变。
-- 位置：src/styles/variables.scss
-
-## element-ui 组件尺寸配置
-
-- 说明：这里可以修改你 element-ui 组件尺寸，element-ui 组件的尺寸一共分为 large、default、small 、mini，本项目默认使用的是 small。
-- 位置：src/plugins/element.js
-- 示例代码：
-
-```js
-import Vue from "vue";
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/display.css";
-
-import "@/styles/element-variables.scss";
-
-Vue.use(ElementUI, {
-  size: "small", // element-ui组件的尺寸一共分为large、default、small 、mini
-});
-```
+### 联系：QQ 1204505056
