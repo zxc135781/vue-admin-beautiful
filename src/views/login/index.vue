@@ -10,10 +10,9 @@
     <el-row>
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-form
-          ref="loginForm"
-          :model="loginForm"
-          :rules="loginRules"
-          auto-complete="off"
+          ref="form"
+          :model="form"
+          :rules="rules"
           class="login-form"
           label-position="left"
         >
@@ -26,37 +25,36 @@
               <vab-icon :icon="['fas', 'user']" />
             </span>
             <el-input
-              v-model.trim="loginForm.userName"
+              v-model.trim="form.userName"
               v-focus
-              auto-complete="off"
               placeholder="请输入用户名"
               tabindex="1"
               type="text"
             />
           </el-form-item>
           <el-form-item prop="password">
-            <span class="svg-container svg-container-pass"
-              ><vab-icon :icon="['fas', 'lock']"
-            /></span>
+            <span class="svg-container">
+              <vab-icon :icon="['fas', 'lock']" />
+            </span>
             <el-input
               :key="passwordType"
               ref="password"
-              v-model.trim="loginForm.password"
+              v-model.trim="form.password"
               :type="passwordType"
-              auto-complete="off"
-              placeholder="请输入密码"
               tabindex="2"
+              placeholder="请输入密码"
               @keyup.enter.native="handleLogin"
             />
             <span
               v-if="passwordType === 'password'"
-              class="show-pwd"
-              @click="showPwd"
-              ><vab-icon :icon="['fas', 'eye-slash']"
-            /></span>
-            <span v-else class="show-pwd" @click="showPwd"
-              ><vab-icon :icon="['fas', 'eye']"
-            /></span>
+              class="show-password"
+              @click="handlePassword"
+            >
+              <vab-icon :icon="['fas', 'eye-slash']"></vab-icon>
+            </span>
+            <span v-else class="show-password" @click="handlePassword">
+              <vab-icon :icon="['fas', 'eye']"></vab-icon>
+            </span>
           </el-form-item>
           <el-button
             :loading="loading"
@@ -104,11 +102,11 @@ export default {
     return {
       nodeEnv: process.env.NODE_ENV,
       title: this.$baseTitle,
-      loginForm: {
+      form: {
         userName: "",
         password: "",
       },
-      loginRules: {
+      rules: {
         userName: [
           {
             required: true,
@@ -138,12 +136,13 @@ export default {
     },
   },
   mounted() {
-    //项目上线时记得去掉
-    this.loginForm.userName = "admin";
-    this.loginForm.password = "123456";
+    if ("production" !== process.env.NODE_ENV) {
+      this.form.userName = "admin";
+      this.form.password = "123456";
+    }
   },
   methods: {
-    showPwd() {
+    handlePassword() {
       this.passwordType === "password"
         ? (this.passwordType = "")
         : (this.passwordType = "password");
@@ -152,10 +151,10 @@ export default {
       });
     },
     handleLogin() {
-      this.$refs.loginForm.validate(async (valid) => {
+      this.$refs.form.validate(async (valid) => {
         if (valid) {
           this.loading = true;
-          await this.$store.dispatch("user/login", this.loginForm).catch(() => {
+          await this.$store.dispatch("user/login", this.form).catch(() => {
             this.loading = false;
           });
           const routerPath =
@@ -264,12 +263,12 @@ export default {
     user-select: none;
   }
 
-  .show-pwd {
+  .show-password {
     position: absolute;
     top: 14px;
     right: 25px;
     font-size: 16px;
-    color: $base-font-color;
+    color: #d7dee3;
     cursor: pointer;
     user-select: none;
   }
