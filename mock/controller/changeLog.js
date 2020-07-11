@@ -141,6 +141,10 @@ const data = [
     content: "首次采用sass-loader 9.0写法，感谢github用户 shaonialife",
     timestamp: "2020-07-7",
   },
+  {
+    content: "添加vue-amap组件",
+    timestamp: "2020-07-11",
+  },
 ];
 
 export default [
