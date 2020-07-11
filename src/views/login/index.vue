@@ -8,6 +8,9 @@
     >
     </el-alert>
     <el-row>
+      <el-col :xs="24" :sm="24" :md="12" :lg="16" :xl="16">
+        <div style="color: transparent;">占位符</div>
+      </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-form
           ref="form"
@@ -181,18 +184,18 @@ export default {
   background-size: cover;
 
   .title {
-    height: 50px;
     font-size: 54px;
     font-weight: 500;
     color: rgba(14, 18, 26, 1);
   }
 
   .title-tips {
-    height: 24px;
     margin-top: 29px;
     font-size: 26px;
     font-weight: 400;
     color: rgba(14, 18, 26, 1);
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .login-btn {
@@ -210,7 +213,7 @@ export default {
   .login-form {
     position: relative;
     max-width: 100%;
-    margin: 22vh 10% 10%;
+    margin: calc((100vh - 425px) / 2) 10% 10%;
     overflow: hidden;
 
     .forget-password {
